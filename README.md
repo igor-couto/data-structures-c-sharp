@@ -1,11 +1,11 @@
 # Data Structures and algorithms  in C# [WIP]
 
 - Array	✅
-- Stack	
-- Queue	
-- Singly-Linked List	
-- Doubly-Linked List	
-- Skip List	
+- Singly-Linked List
+- Doubly-Linked List
+- Stack
+- Queue
+- Skip List
 - Hash Table
 - Binary Search Tree
 - Cartesian Tree
@@ -17,9 +17,9 @@
 
 ## Operations
 
-- Access
-- Search
 - Insertion
+- Search
+- Access
 - Deletion
 
 ### Author
