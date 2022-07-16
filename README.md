@@ -18,8 +18,8 @@
 ## Operations
 
 - Insertion
-- Search
 - Access
+- Search
 - Deletion
 
 ### Author
