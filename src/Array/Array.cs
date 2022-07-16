@@ -17,24 +17,13 @@ public class Array
     }
 
     // In all scenarios it will be Θ(1)
-    public int Access(int index) => _array[index];
-
-    // In all scenarios it will be Θ(1)
-    public void Deletion(int index)
+    public void Insert(int index, int value)
     {
-        if (index < _size)
-            _array[index] = -1;
-    }
-
-    // In all scenarios it will be Θ(1)
-    public void Insertion(int index, int value)
-    {
-        if (index < _size)
-            _array[index] = value;
+        if (index < _size) _array[index] = value;
     }
 
     // Θ(n)
-    public int Insertion(int value)
+    public int Insert(int value)
     {
         for (var index = 0; index < _size; index++)
         {
@@ -47,6 +36,9 @@ public class Array
         return -1;
     }
 
+    // In all scenarios it will be Θ(1)
+    public int Access(int index) => _array[index];
+
     // Θ(n)
     public int Search(int value)
     {
@@ -56,5 +48,19 @@ public class Array
                 return index;
         }
         return -1;
+    }
+
+    // In all scenarios it will be Θ(1)
+    public void Delete(int index)
+    {
+        if (index < _size) _array[index] = -1;
+    }
+
+    public void Print()
+    {
+        for (var index = 0; index < _size; index++)
+        {
+            Console.WriteLine($"Index: {index}, Value: {_array[index]}");
+        }
     }
 }

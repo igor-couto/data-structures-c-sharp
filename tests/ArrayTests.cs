@@ -2,7 +2,7 @@ namespace tests;
 
 using DataStructures.Array;
 
-public class Tests
+public class ArrayTests
 {
     private Array _array;
 
@@ -15,7 +15,7 @@ public class Tests
         var index = 2;
         var value = 3;
 
-        _array.Insertion(index, value);
+        _array.Insert(index, value);
 
         var actualValue = _array.Access(index);
         Assert.That(actualValue, Is.EqualTo(value));
@@ -26,7 +26,7 @@ public class Tests
     {
         var value = 3;
 
-        _array.Insertion(value);
+        _array.Insert(value);
 
         var actualValue = _array.Access(0);
         Assert.That(actualValue, Is.EqualTo(value));
@@ -37,9 +37,9 @@ public class Tests
     {
         var value = 6;
         var index = 0;
-        _array.Insertion(index, value);
+        _array.Insert(index, value);
 
-        _array.Deletion(index);
+        _array.Delete(index);
         var actualValue = _array.Access(0);
 
         Assert.That(actualValue, Is.EqualTo(-1));
@@ -50,7 +50,7 @@ public class Tests
     {
         var value = 6;
         var index = 4;
-        _array.Insertion(index, value);
+        _array.Insert(index, value);
 
         _array.Search(index);
         var actualIndex = _array.Search(value);
