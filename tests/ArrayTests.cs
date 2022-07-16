@@ -1,6 +1,6 @@
 namespace tests;
 
-using Array = DataStructures.Array;
+using DataStructures.Array;
 
 public class Tests
 {
