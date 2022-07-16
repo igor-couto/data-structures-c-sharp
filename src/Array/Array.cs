@@ -1,8 +1,6 @@
-using System;
+namespace DataStructures.Array;
 
-namespace DataStructures;
-
-public class Array : Operations<int, int>
+public class Array
 {
     private int[] _array;
     private int _size;
