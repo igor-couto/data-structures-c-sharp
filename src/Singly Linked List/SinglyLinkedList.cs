@@ -11,14 +11,9 @@ public class SinglyLinkedList
     public Node InsertFirst(int value)
     {
         var newNode = new Node(value);
-        newNode.Next = _firstNode;
 
-        _firstNode = newNode;
+        InsertFirst(newNode);
 
-        if (_lastNode is null)
-            _lastNode = newNode;
-
-        Count++;
         return newNode;
     }
 
@@ -40,14 +35,8 @@ public class SinglyLinkedList
     {
         var newNode = new Node(value);
 
-        if (_lastNode is null)
-            _firstNode = newNode;
-        else
-            _lastNode.Next = newNode;
+        InsertLast(newNode);
 
-        _lastNode = newNode;
-
-        Count++;
         return newNode;
     }
 
@@ -81,6 +70,13 @@ public class SinglyLinkedList
     }
 
     // Θ(1)
+    public void InsertBefore(Node node, int value)
+    {
+        var newNode = new Node(value);
+        InsertBefore(node, newNode);
+    }
+
+    // Θ(1)
     public void InsertBefore(Node node, Node newNode)
     {
         var currentNode = _firstNode;
@@ -94,13 +90,6 @@ public class SinglyLinkedList
 
         newNode.Next = node;
         Count++;
-    }
-
-    // Θ(1)
-    public void InsertBefore(Node node, int value)
-    {
-        var newNode = new Node(value);
-        InsertBefore(node, newNode);
     }
 
     // Θ(n)
