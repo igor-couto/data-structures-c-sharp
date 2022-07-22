@@ -180,6 +180,7 @@ public class SinglyLinkedList
                 currentNode = null;
                 break;
             }
+            currentNode = currentNode.Next;
         }
         Count--;
     }
@@ -199,6 +200,7 @@ public class SinglyLinkedList
     public void DeleteLast()
         => Delete(_lastNode);
 
+    // Θ(n)
     public void Clear()
     {
         var currentNode = _firstNode;
@@ -219,23 +221,8 @@ public class SinglyLinkedList
         var currentNode = _firstNode;
         while (currentNode is not null)
         {
-            unsafe
-            {
-                var o = new object();
-                TypedReference tr = __makeref(o);
-                IntPtr ptr = **(IntPtr**)(&tr);
-
-                Console.WriteLine($"[Node: {ptr}, Value:{currentNode.Value}]");
-            }
+            Console.WriteLine(currentNode);
             currentNode = currentNode.Next;
         }
     }
-}
-
-public class Node
-{
-    public int Value { get; set; }
-    public Node Next { get; set; }
-
-    public Node(int value) => Value = value;
 }
