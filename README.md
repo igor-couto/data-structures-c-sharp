@@ -1,7 +1,7 @@
 # Data Structures and algorithms  in C# [WIP]
 
 - Array	✅
-- Singly-Linked List
+- Singly-Linked List ✅
 - Doubly-Linked List
 - Stack
 - Queue
