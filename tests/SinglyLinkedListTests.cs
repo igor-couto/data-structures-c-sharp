@@ -124,6 +124,49 @@ public class SinglyLinkedListTests
         Assert.That(_singlyLinkedList.Count, Is.EqualTo(amount));
     }
 
+    [Test]
+    public void InsertValueAfter()
+    {
+        _singlyLinkedList.InsertLast(0);
+        var node = _singlyLinkedList.InsertLast(1);
+        var lastNode = _singlyLinkedList.InsertLast(2);
+
+        _singlyLinkedList.InsertAfter(node, 99);
+
+        var actualNode = _singlyLinkedList.Access(99);
+
+        Assert.That(node.Next, Is.EqualTo(actualNode));
+        Assert.That(actualNode.Next, Is.EqualTo(lastNode));
+    }
+
+    [Test]
+    public void InsertNodeAfter()
+    {
+        _singlyLinkedList.InsertLast(0);
+        var node = _singlyLinkedList.InsertLast(1);
+        var lastNode = _singlyLinkedList.InsertLast(2);
+
+        var actualNode = new Node(99);
+        _singlyLinkedList.InsertAfter(node, actualNode);
+
+        Assert.That(node.Next, Is.EqualTo(actualNode));
+        Assert.That(actualNode.Next, Is.EqualTo(lastNode));
+    }
+
+    [Test]
+    public void InsertNodeAfterLast()
+    {
+        _singlyLinkedList.InsertLast(0);
+        _singlyLinkedList.InsertLast(1);
+        var node = _singlyLinkedList.InsertLast(2);
+
+        var actualNode = new Node(99);
+        _singlyLinkedList.InsertAfter(node, actualNode);
+
+        Assert.That(node.Next, Is.EqualTo(actualNode));
+        Assert.That(actualNode.Next, Is.EqualTo(null));
+    }
+
     [TestCase(1)]
     [TestCase(2)]
     [TestCase(10)]
