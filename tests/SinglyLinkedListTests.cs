@@ -167,6 +167,48 @@ public class SinglyLinkedListTests
         Assert.That(actualNode.Next, Is.EqualTo(null));
     }
 
+    [Test]
+    public void InsertValueBefore()
+    {
+        _singlyLinkedList.InsertLast(0);
+        var node = _singlyLinkedList.InsertLast(1);
+        var lastNode = _singlyLinkedList.InsertLast(2);
+
+        _singlyLinkedList.InsertBefore(lastNode, 99);
+
+        var actualNode = _singlyLinkedList.Access(99);
+
+        Assert.That(node.Next, Is.EqualTo(actualNode));
+        Assert.That(actualNode.Next, Is.EqualTo(lastNode));
+    }
+
+    [Test]
+    public void InsertNodeBefore()
+    {
+        _singlyLinkedList.InsertLast(0);
+        var node = _singlyLinkedList.InsertLast(1);
+        var lastNode = _singlyLinkedList.InsertLast(2);
+
+        var actualNode = new Node(99);
+        _singlyLinkedList.InsertBefore(lastNode, actualNode);
+
+        Assert.That(node.Next, Is.EqualTo(actualNode));
+        Assert.That(actualNode.Next, Is.EqualTo(lastNode));
+    }
+
+    [Test]
+    public void InsertNodeBeforeFirst()
+    {
+        var firstNode = _singlyLinkedList.InsertLast(0);
+        var node = _singlyLinkedList.InsertLast(1);
+        _singlyLinkedList.InsertLast(2);
+
+        var actualNode = new Node(99);
+        _singlyLinkedList.InsertBefore(firstNode, actualNode);
+
+        Assert.That(actualNode.Next, Is.EqualTo(firstNode));
+    }
+
     [TestCase(1)]
     [TestCase(2)]
     [TestCase(10)]
