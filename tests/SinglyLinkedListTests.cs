@@ -31,8 +31,8 @@ public class SinglyLinkedListTests
     [SetUp]
     public void Setup()
     {
-        _faker = new Faker();
-        _singlyLinkedList = new SinglyLinkedList();
+        _faker = new();
+        _singlyLinkedList = new();
     }
 
     [Test]
