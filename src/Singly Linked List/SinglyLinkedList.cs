@@ -69,14 +69,14 @@ public class SinglyLinkedList
         Count++;
     }
 
-    // Θ(1)
+    // Θ(n)
     public void InsertBefore(Node node, int value)
     {
         var newNode = new Node(value);
         InsertBefore(node, newNode);
     }
 
-    // Θ(1)
+    // Θ(n)
     public void InsertBefore(Node node, Node newNode)
     {
         var currentNode = _firstNode;
