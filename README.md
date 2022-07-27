@@ -2,7 +2,7 @@
 
 - Array	✅
 - Singly-Linked List ✅
-- Doubly-Linked List
+- Doubly-Linked List ✅
 - Stack
 - Queue
 - Skip List
