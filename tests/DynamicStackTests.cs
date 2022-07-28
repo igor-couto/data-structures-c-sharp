@@ -27,6 +27,7 @@ public class DynamicStackTests
         Assert.That(_stack.Count, Is.EqualTo(0));
         Assert.That(_stack.Pop, Is.EqualTo(null));
         Assert.That(_stack.Peek, Is.EqualTo(null));
+        Assert.That(_stack.IsEmpty, Is.EqualTo(true));
     }
 
     [Test]

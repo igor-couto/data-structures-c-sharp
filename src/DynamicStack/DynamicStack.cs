@@ -63,4 +63,10 @@ public class DynamicStack
 
         return false;
     }
+
+    // Θ(1)
+    public bool IsEmpty()
+    {
+        return Count == 0;
+    }
 }
