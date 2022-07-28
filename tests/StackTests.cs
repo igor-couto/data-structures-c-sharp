@@ -1,4 +1,4 @@
-namespace tests;
+namespace Tests;
 
 using DataStructures.Stack;
 using Bogus;
