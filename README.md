@@ -1,10 +1,10 @@
 # Data Structures and algorithms  in C# [WIP]
 
-- Array	✅
-- Singly-Linked List ✅
-- Doubly-Linked List ✅
-- Stack ✅
-- Dynamic Stack ✅
+- ✅ Array
+- ✅ Singly-Linked List
+- ✅ Doubly-Linked List
+- ✅ Stack
+- ✅ Dynamic Stack
 - Queue
 - Skip List
 - Hash Table
