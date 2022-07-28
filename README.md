@@ -3,8 +3,8 @@
 - Array	✅
 - Singly-Linked List ✅
 - Doubly-Linked List ✅
-- Stack
-- Dynamic Stack
+- Stack ✅
+- Dynamic Stack ✅
 - Queue
 - Skip List
 - Hash Table
