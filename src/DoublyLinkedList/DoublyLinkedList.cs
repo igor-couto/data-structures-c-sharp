@@ -155,8 +155,13 @@ public class DoublyLinkedList
     }
 
     // Θ(1)
-    public void Delete(Node node)
+    public void Delete(Node nodeToDelete)
     {
+        var node = Access(nodeToDelete.Value);
+
+        if (node is null)
+            return;
+
         var previous = node.Previous;
         var next = node.Next;
 

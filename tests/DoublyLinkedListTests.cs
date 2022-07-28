@@ -246,6 +246,18 @@ public class DoublyLinkedListTests
     }
 
     [Test]
+    public void DeleteShouldDoNothingWhenNodeIsNotFound()
+    {
+        _doublyLinkedList.InsertLast(0);
+        _doublyLinkedList.InsertLast(1);
+        _doublyLinkedList.InsertLast(2);
+
+        _doublyLinkedList.Delete(3);
+
+        Assert.That(_doublyLinkedList.Count, Is.EqualTo(3));
+    }
+
+    [Test]
     public void ContainsValue()
     {
         SeedAmount(10);

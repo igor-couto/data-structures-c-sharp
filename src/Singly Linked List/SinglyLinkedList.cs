@@ -167,11 +167,11 @@ public class SinglyLinkedList
                     _lastNode = null;
 
                 currentNode = null;
+                Count--;
                 break;
             }
             currentNode = currentNode.Next;
         }
-        Count--;
     }
 
     // Θ(n)

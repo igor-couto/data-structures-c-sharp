@@ -260,6 +260,18 @@ public class SinglyLinkedListTests
     }
 
     [Test]
+    public void DeleteShouldDoNothingWhenNodeIsNotFound()
+    {
+        _singlyLinkedList.InsertLast(0);
+        _singlyLinkedList.InsertLast(1);
+        _singlyLinkedList.InsertLast(2);
+
+        _singlyLinkedList.Delete(3);
+
+        Assert.That(_singlyLinkedList.Count, Is.EqualTo(3));
+    }
+
+    [Test]
     public void ContainsValue()
     {
         SeedAmount(10);
