@@ -5,7 +5,7 @@
 - ✅ Doubly-Linked List
 - ✅ Stack
 - ✅ Dynamic Stack
-- Queue
+- ✅ Queue
 - Skip List
 - Hash Table
 - Binary Search Tree
