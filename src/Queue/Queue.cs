@@ -18,7 +18,7 @@ public class Queue
             _queue[index] = -1;
     }
 
-    // Θ(1)
+    // O(1)
     public void Enqueue(int value)
     {
         if (Count == Capacity)
@@ -28,7 +28,7 @@ public class Queue
         Count++;
     }
 
-    // Θ(1)
+    // O(1)
     public int Dequeue()
     {
         if (Count == 0)
@@ -44,7 +44,7 @@ public class Queue
         return value;
     }
 
-    // Θ(1)
+    // O(1)
     public int Peek()
     {
         if (Count == 0)
@@ -53,13 +53,13 @@ public class Queue
         return _queue[_startIndex];
     }
 
-    // Θ(1)
+    // O(1)
     public bool IsFull()
     {
         return Count == Capacity;
     }
 
-    // Θ(n)
+    // O(n)
     public void Clear()
     {
         for (var index = 0; index < Count; index++)
@@ -69,7 +69,7 @@ public class Queue
         _startIndex = 0;
     }
 
-    // Θ(n)
+    // O(n)
     public bool Contains(int value)
     {
         for (var index = 0; index < Count; index++)

@@ -5,14 +5,14 @@ public class DynamicStack
     private Node _topNode;
     public int Count { get; private set; }
 
-    // Θ(1)
+    // O(1)
     public void Push(int value)
     {
         var node = new Node(value);
         Push(node);
     }
 
-    // Θ(1)
+    // O(1)
     public void Push(Node node)
     {
         node.Previous = _topNode;
@@ -22,7 +22,7 @@ public class DynamicStack
         Count++;
     }
 
-    // Θ(1)
+    // O(1)
     public Node Pop()
     {
         var node = _topNode;
@@ -36,20 +36,20 @@ public class DynamicStack
         return node;
     }
 
-    // Θ(1)
+    // O(1)
     public Node Peek()
     {
         return _topNode;
     }
 
-    // Θ(n)
+    // O(n)
     public void Clear()
     {
         while (_topNode is not null)
             Pop();
     }
 
-    // Θ(n)
+    // O(n)
     public bool Contains(int value)
     {
         var currentNode = _topNode;
@@ -64,7 +64,7 @@ public class DynamicStack
         return false;
     }
 
-    // Θ(1)
+    // O(1)
     public bool IsEmpty()
     {
         return Count == 0;

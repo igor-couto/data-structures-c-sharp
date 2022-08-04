@@ -7,7 +7,7 @@ public class SinglyLinkedList
 
     public int Count { get; private set; }
 
-    // Θ(1)
+    // O(1)
     public Node InsertFirst(int value)
     {
         var newNode = new Node(value);
@@ -17,7 +17,7 @@ public class SinglyLinkedList
         return newNode;
     }
 
-    // Θ(1)
+    // O(1)
     public void InsertFirst(Node newNode)
     {
         newNode.Next = _firstNode;
@@ -30,7 +30,7 @@ public class SinglyLinkedList
         Count++;
     }
 
-    // Θ(1)
+    // O(1)
     public Node InsertLast(int value)
     {
         var newNode = new Node(value);
@@ -40,7 +40,7 @@ public class SinglyLinkedList
         return newNode;
     }
 
-    // Θ(1)
+    // O(1)
     public void InsertLast(Node newNode)
     {
         if (_lastNode is null)
@@ -53,14 +53,14 @@ public class SinglyLinkedList
         Count++;
     }
 
-    // Θ(1)
+    // O(1)
     public void InsertAfter(Node node, int value)
     {
         var newNode = new Node(value);
         InsertAfter(node, newNode);
     }
 
-    // Θ(1)
+    // O(1)
     public void InsertAfter(Node node, Node newNode)
     {
         newNode.Next = node.Next;
@@ -69,14 +69,14 @@ public class SinglyLinkedList
         Count++;
     }
 
-    // Θ(n)
+    // O(n)
     public void InsertBefore(Node node, int value)
     {
         var newNode = new Node(value);
         InsertBefore(node, newNode);
     }
 
-    // Θ(n)
+    // O(n)
     public void InsertBefore(Node node, Node newNode)
     {
         var currentNode = _firstNode;
@@ -92,7 +92,7 @@ public class SinglyLinkedList
         Count++;
     }
 
-    // Θ(n)
+    // O(n)
     public Node Access(int value)
     {
         var currentNode = _firstNode;
@@ -106,7 +106,7 @@ public class SinglyLinkedList
         return null;
     }
 
-    // Θ(n)
+    // O(n)
     public Node AccessLast(int value)
     {
         Node lastNode = null;
@@ -122,7 +122,7 @@ public class SinglyLinkedList
         return lastNode;
     }
 
-    // Θ(n)
+    // O(n)
     public bool Contains(int value)
     {
         var currentNode = _firstNode;
@@ -136,7 +136,7 @@ public class SinglyLinkedList
         return false;
     }
 
-    // Θ(n)
+    // O(n)
     public Node Search(int value)
     {
         var currentNode = _firstNode;
@@ -149,7 +149,7 @@ public class SinglyLinkedList
         return null;
     }
 
-    // Θ(n)
+    // O(n)
     public void Delete(Node node)
     {
         var previousNode = _firstNode;
@@ -174,22 +174,22 @@ public class SinglyLinkedList
         }
     }
 
-    // Θ(n)
+    // O(n)
     public void Delete(int value)
     {
         var node = new Node(value);
         Delete(node);
     }
 
-    // Θ(n)
+    // O(n)
     public void DeleteFirst()
         => Delete(_firstNode);
 
-    // Θ(n)
+    // O(n)
     public void DeleteLast()
         => Delete(_lastNode);
 
-    // Θ(n)
+    // O(n)
     public void Clear()
     {
         var currentNode = _firstNode;

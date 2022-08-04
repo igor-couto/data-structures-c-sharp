@@ -15,7 +15,7 @@ public class Stack
             _stack[index] = -1;
     }
 
-    // Θ(1)
+    // O(1)
     public void Push(int value)
     {
         if (Count == Capacity)
@@ -25,7 +25,7 @@ public class Stack
         Count++;
     }
 
-    // Θ(1)
+    // O(1)
     public int Pop()
     {
         if (Count == 0)
@@ -38,7 +38,7 @@ public class Stack
         return value;
     }
 
-    // Θ(1)
+    // O(1)
     public int Peek()
     {
         if (Count == 0)
@@ -47,13 +47,13 @@ public class Stack
         return _stack[Count - 1];
     }
 
-    // Θ(1)
+    // O(1)
     public bool IsFull()
     {
         return Count == Capacity;
     }
 
-    // Θ(n)
+    // O(n)
     public void Clear()
     {
         for (var index = 0; index < Count; index++)
@@ -62,7 +62,7 @@ public class Stack
         Count = 0;
     }
 
-    // Θ(n)
+    // O(n)
     public bool Contains(int value)
     {
         for (var index = 0; index < Count; index++)

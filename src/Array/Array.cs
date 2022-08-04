@@ -16,13 +16,13 @@ public class Array
             _array[index] = -1;
     }
 
-    // In all scenarios it will be Θ(1)
+    // O(1)
     public void Insert(int index, int value)
     {
         if (index < _size) _array[index] = value;
     }
 
-    // Θ(n)
+    // O(n)
     public int Insert(int value)
     {
         for (var index = 0; index < _size; index++)
@@ -36,10 +36,10 @@ public class Array
         return -1;
     }
 
-    // In all scenarios it will be Θ(1)
+    // O(1)
     public int Access(int index) => _array[index];
 
-    // Θ(n)
+    // O(n)
     public int Search(int value)
     {
         for (var index = 0; index < _size; index++)
@@ -50,7 +50,7 @@ public class Array
         return -1;
     }
 
-    // In all scenarios it will be Θ(1)
+    // O(1)
     public void Delete(int index)
     {
         if (index < _size) _array[index] = -1;

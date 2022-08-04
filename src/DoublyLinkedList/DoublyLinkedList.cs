@@ -7,7 +7,7 @@ public class DoublyLinkedList
 
     public int Count { get; private set; }
 
-    // Θ(1)
+    // O(1)
     public Node InsertFirst(int value)
     {
         var newNode = new Node(value);
@@ -17,7 +17,7 @@ public class DoublyLinkedList
         return newNode;
     }
 
-    // Θ(1)
+    // O(1)
     public void InsertFirst(Node newNode)
     {
         newNode.Next = _firstNode;
@@ -30,7 +30,7 @@ public class DoublyLinkedList
         Count++;
     }
 
-    // Θ(1)
+    // O(1)
     public Node InsertLast(int value)
     {
         var newNode = new Node(value);
@@ -40,7 +40,7 @@ public class DoublyLinkedList
         return newNode;
     }
 
-    // Θ(1)
+    // O(1)
     public void InsertLast(Node newNode)
     {
         if (_lastNode is null)
@@ -58,14 +58,14 @@ public class DoublyLinkedList
         Count++;
     }
 
-    // Θ(1)
+    // O(1)
     public void InsertAfter(Node node, int value)
     {
         var newNode = new Node(value);
         InsertAfter(node, newNode);
     }
 
-    // Θ(1)
+    // O(1)
     public void InsertAfter(Node node, Node newNode)
     {
         newNode.Next = node.Next;
@@ -76,14 +76,14 @@ public class DoublyLinkedList
         Count++;
     }
 
-    // Θ(1)
+    // O(1)
     public void InsertBefore(Node node, int value)
     {
         var newNode = new Node(value);
         InsertBefore(node, newNode);
     }
 
-    // Θ(1)
+    // O(1)
     public void InsertBefore(Node node, Node newNode)
     {
 
@@ -99,7 +99,7 @@ public class DoublyLinkedList
         Count++;
     }
 
-    // Θ(n)
+    // O(n)
     public Node Access(int value)
     {
         var currentNode = _firstNode;
@@ -113,7 +113,7 @@ public class DoublyLinkedList
         return null;
     }
 
-    // Θ(n)
+    // O(n)
     public Node AccessLast(int value)
     {
         var currentNode = _lastNode;
@@ -127,7 +127,7 @@ public class DoublyLinkedList
         return null;
     }
 
-    // Θ(n)
+    // O(n)
     public bool Contains(int value)
     {
         var currentNode = _firstNode;
@@ -141,7 +141,7 @@ public class DoublyLinkedList
         return false;
     }
 
-    // Θ(n)
+    // O(n)
     public Node Search(int value)
     {
         var currentNode = _firstNode;
@@ -154,7 +154,7 @@ public class DoublyLinkedList
         return null;
     }
 
-    // Θ(1)
+    // O(1)
     public void Delete(Node nodeToDelete)
     {
         var node = Access(nodeToDelete.Value);
@@ -180,22 +180,22 @@ public class DoublyLinkedList
         Count--;
     }
 
-    //Θ(1)
+    //O(1)
     public void Delete(int value)
     {
         var node = new Node(value);
         Delete(node);
     }
 
-    // Θ(1)
+    // O(1)
     public void DeleteFirst()
         => Delete(_firstNode);
 
-    // Θ(1)
+    // O(1)
     public void DeleteLast()
         => Delete(_lastNode);
 
-    // Θ(n)
+    // O(n)
     public void Clear()
     {
         var currentNode = _firstNode;
