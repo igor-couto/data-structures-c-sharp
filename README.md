@@ -3,6 +3,8 @@
 - ✅ Array
 - ✅ Singly-Linked List
 - ✅ Doubly-Linked List
+- Dynamic Array
+- Unrolled linked list
 - ✅ Stack
 - ✅ Dynamic Stack
 - ✅ Queue
@@ -15,6 +17,7 @@
 - Splay Tree
 - AVL Tree
 - KD Tree
+- Heap
 
 ## Operations
 
